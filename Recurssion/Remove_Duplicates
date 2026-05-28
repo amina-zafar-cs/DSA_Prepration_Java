@@ -1,0 +1,40 @@
+Problem 12
+
+Remove Duplicates in a String
+
+"appnnacollege"
+Solution:
+
+public class RemoveDuplicate{
+
+	public static void main(String args[]){
+
+		removeDuplicate("aminazafar",0,new StringBuilder(""), new boolean[26]);
+
+	}
+
+	public static void removeDuplicate(String str, int index, StringBuilder newStr, boolean[] map){
+
+		if(index==str.length()){
+
+			System.out.print(newStr);
+			return;
+		}
+
+		char currentchar=str.charAt(index);
+		if(map[currentchar-'a']==true){
+
+			removeDuplicate(str,index+1,newStr, map);
+			
+		}
+		else{
+
+			map[currentchar-'a']=true;
+
+			newStr.append(currentchar);
+
+			removeDuplicate(str,index+1,newStr, map);
+		}	
+	}
+
+}

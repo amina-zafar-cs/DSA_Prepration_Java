@@ -1,0 +1,43 @@
+Problem 14
+
+Binary Strings Problem
+
+Print all binary strings of size N without consecutive ones.
+Solution:
+public class PrintBinary{
+
+	public static void main(String args[]){
+
+
+		printBinary(3,0,new String(""));
+
+
+
+
+
+	}
+
+
+	public static void printBinary(int n,int lastplace, String S){
+
+		if(n==0){
+
+			System.out.println(S);
+			return;
+		}
+	
+		if(lastplace==0){
+
+			printBinary(n-1,0, S+0);
+	
+			printBinary(n-1,1, S+1);
+		}
+		else{
+
+
+			printBinary(n-1,0, S+0);			
+
+		}
+	}
+
+}

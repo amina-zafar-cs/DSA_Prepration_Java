@@ -1,0 +1,42 @@
+Problem: Print sum of n natural numbers.
+
+Solution: 
+
+import java.util.*;
+public class RunningTotal{
+
+	public static void main(String args[]){
+	
+	
+		System.out.print(total(5));
+		
+	}
+
+	public static int total(int n){
+
+
+		if(n==0){
+			return 0;
+  }
+
+		int sum=n+total(n-1);
+
+		return sum;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

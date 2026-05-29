@@ -1,0 +1,51 @@
+Problem: Print numbers from 1 to n in increasing order
+
+Solution:
+
+import java.util.*;
+public class Recursion_inc{
+
+	public static void main(String args[]){
+		
+		print(1);
+		
+	}
+
+	public static void print(int n){
+
+
+		if(n==5){
+
+			System.out.print("5");
+			
+			return;
+
+
+		}
+
+
+		System.out.print(n+" ");
+
+		print(n+1);
+
+
+	}
+		
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

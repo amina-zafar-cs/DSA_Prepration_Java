@@ -1,0 +1,51 @@
+Problem: Print the indexes of all the occurances of an element in an array.
+
+Solution:
+
+import java.util.*;
+public class AllOccurances{
+
+	public static void main(String args[]){
+	
+		int [] arr={2,4,4,5,7,5,9,5};
+		
+		occu(arr,0,5);	
+		
+	}
+
+	public static void occu(int arr[], int index,int key){
+
+		if(index==arr.length){
+
+			return;
+
+		}
+		
+		if(arr[index]==key){
+		
+			System.out.print(index+" ");	
+
+		}
+
+		occu(arr,index+1,key);
+
+	}
+		
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

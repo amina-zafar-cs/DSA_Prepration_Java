@@ -1,0 +1,48 @@
+Problem: You are given a number (eg -  2019), convert it into a String of english like“two zero one nine”.
+Use a recursive function to solve this problem.
+NOTE-Thedigitsofthenumberwillonlybeintherange0-9andthelastdigitofanumbercan’t be 0
+
+Solution:
+
+import java.util.*;
+public class ConvertString{
+		static String digits[]={"zero","one", "two", "three","four","five","six","seven","eight","nine", "ten"};
+	public static void main(String args[]){	
+		
+		convert(3925);	
+	}
+
+	public static void convert(int n){
+
+		if(n==0){
+
+			return;
+
+		}
+		
+		int digit=n%10;
+		convert(n/10);
+
+		System.out.print(digits[digit]+" ");
+
+		
+	}
+		
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

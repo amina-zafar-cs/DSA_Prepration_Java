@@ -1,0 +1,51 @@
+Problem: Find the last occurance of an elemnt in an array.
+
+Solution:
+
+import java.util.*;
+public class LastOccurance{
+
+	public static void main(String args[]){
+	
+		int arr[]={10,2,8,7,7,7,9,7};
+		System.out.print(lastOccurance(arr,0,-1,7));
+		
+	}
+
+	public static int lastOccurance(int n[],int i,int occ,int target){
+
+		
+
+
+		if(i==(n.length)){
+			return occ;
+			
+		}
+
+		else if(n[i]==target){
+		
+			
+			 occ=i;
+
+		}
+
+		
+			
+			return lastOccurance(n,(i+1),occ,target);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

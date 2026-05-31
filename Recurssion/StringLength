@@ -1,0 +1,38 @@
+Problem: Find the length of string using reccursion.
+
+Solution:
+
+import java.util.*;
+public class FindLength{
+		
+	public static void main(String args[]){
+	
+		System.out.print(findLength("amina",0,0));
+		
+	}
+
+	public static int findLength(String s, int index, int length){
+
+		if(index==s.length()){
+
+			return length;
+		}
+		length++;
+		return findLength(s,index+1,length);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

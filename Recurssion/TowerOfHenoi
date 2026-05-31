@@ -1,0 +1,29 @@
+Problem: Tower of Henoi
+
+Solution:
+
+public class TowerHenoi{
+
+	public static void main(String args[]){
+		toh(4,"S","H","D");
+	}
+
+	public static void toh(int n, String src, String hel, String des){
+
+
+		if(n==1){
+
+			System.out.println("transfer the disk "+n+" from "+src+" to "+des);
+			return;
+
+		}
+		
+		toh(n-1,src,des,hel);
+
+		System.out.println("transfer the disk "+n+" from "+src+" to "+des);
+
+		toh(n-1,hel,src,des);
+
+	}
+
+}

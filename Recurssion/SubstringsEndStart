@@ -1,0 +1,59 @@
+Problem: We are given a string S,we need to find the count of all contiguous substrings starting and ending with the same character.
+
+Solution: 
+
+import java.util.*;
+public class Substring{
+		
+	public static void main(String args[]){
+	
+		System.out.print(findSubstring("abcab",new StringBuilder(""), 0,0,0));
+	
+	}
+
+	public static int findSubstring(String s, StringBuilder b, int index, int count, int ic){
+
+		if(index==s.length()){
+
+			b=new StringBuilder("");
+			ic++;
+			index=ic;
+
+		}
+	
+		if(ic==s.length()){
+
+			return count;
+
+		}
+		b.append(s.charAt(index));
+		
+
+		if(b.charAt(0)==b.charAt(b.length()-1)){
+
+			System.out.print(b+" ");
+
+			count++;
+
+
+		}
+		return findSubstring(s,b, index+1,count,ic);
+		
+	}
+		
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

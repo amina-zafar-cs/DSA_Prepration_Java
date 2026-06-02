@@ -33,7 +33,22 @@ Constraints:
 
 Solution: 
 
-if(n==1&&k==1){
+public class KSymbol{
+
+	public static void main(String args[]){
+
+		
+
+		
+		System.out.print(k_Symbol(4,8));
+	
+
+	}
+
+
+	public static int k_Symbol(int n,int k){
+	
+		if(n==1&&k==1){
 			
 			return 0;
 
@@ -61,5 +76,16 @@ if(n==1&&k==1){
 
 
 		}
+
+
+	}
+
+
+
+
+
+
+
+
 
 

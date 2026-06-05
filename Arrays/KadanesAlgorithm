@@ -1,0 +1,57 @@
+Problem: Kadanes Algorithm
+
+
+import java.util.Scanner;
+public class KaddanMaxSubArray{
+
+	public static void main(String args[]){
+
+		Scanner sc=new Scanner(System.in);
+		int [] array={1,-2,6,-1,3};
+		int max=maxSubArraySumKaddan(array);
+
+		System.out.println("MAx sum subarray is: "+max);
+
+		for(int i=0;i<array.length;i++){
+
+			System.out.print(array[i]+" ");
+
+		}
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+	public static int maxSubArraySumKaddan(int n[]){
+		
+		int sum=0, maxsum=Integer.MIN_VALUE;
+		for(int i=0;i<=n.length-1;i++){
+			sum=sum+n[i];
+			if(sum<0){
+				sum=0;
+
+
+			}
+			if(sum>maxsum){
+					maxsum=sum;
+			}
+				
+			
+			
+			
+
+		}
+
+		return maxsum;
+	
+
+	}
+}

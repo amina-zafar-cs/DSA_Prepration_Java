@@ -1,0 +1,78 @@
+Counting Sort:
+
+
+public class CountingSort{
+
+	public static void main(String rag[]){
+
+		int array[]={7,8,9,1,2,3,4,5,6};
+
+		 countingSort(array);
+		
+		for(int i=0;i<array.length;i++){
+
+			System.out.print(array[i]+" ");
+
+		}
+
+
+
+
+
+
+	}
+
+	public static void countingSort(int [] a){
+
+
+		int max=Integer.MIN_VALUE;
+
+		for(int i=0;i<a.length;i++){
+
+
+			max=Math.max(max,a[i]);
+
+
+		}
+
+		int count[]=new int[max+1];
+
+		for(int i=0;i<a.length;i++){
+
+
+			count[a[i]]++;
+
+		}
+
+		int j=0;
+		
+		for(int i=0;i<a.length;i++){
+
+			
+
+			while(count[i]>0){
+				a[j]=i;
+				j++;
+				count[i]--;
+				
+
+
+			}
+
+
+			
+
+
+		}
+			
+
+		
+		
+
+	}
+
+
+
+
+
+}

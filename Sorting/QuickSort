@@ -1,0 +1,86 @@
+Problem: Quick Sort
+
+Solution: 
+
+public class QuickSort{
+
+
+	public static void main(String args[]){
+
+		int arr[]={9,4,5,3,1,2};
+		printArray(arr);
+		
+		quicksort(0,(arr.length)-1,arr);
+		printArray(arr);
+
+
+
+
+
+	}
+
+	public static void printArray(int []arr){
+
+		for(int i=0;i<=arr.length-1;i++){
+
+			System.out.print(arr[i]+" ");
+		}
+
+		System.out.println();
+	}
+
+	public static void quicksort(int si,int ei, int [] arr){
+		if(si>=ei){
+
+			return;
+		}
+		int pi=partitioning(si,ei,arr);
+		quicksort(si,pi-1,arr);
+		quicksort(pi+1,ei,arr);	
+	}
+
+	public static int partitioning(int si,int ei, int []arr){
+
+			int temp;
+			int pivot=arr[ei];
+			int pi=si;
+			for(int i=si;i<ei;i++){
+
+				if(arr[i]<=pivot){
+
+					temp=arr[i];
+					arr[i]=arr[pi];
+					arr[pi]=temp;
+					pi++;
+
+				}
+			}
+
+			temp=arr[pi];
+			arr[pi]=arr[ei];
+			arr[ei]=temp;
+
+			return pi;
+
+	}
+
+			
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+	
+
+
+}

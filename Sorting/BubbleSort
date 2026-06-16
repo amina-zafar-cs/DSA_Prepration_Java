@@ -1,0 +1,61 @@
+Problem: Bubble sort
+Solution:
+
+public class BubbleSort {
+
+	public static void main(String rag[]){
+
+		int array[]={7,8,9,1,2,3,4,5,6};
+
+		 bubbleSort (array);
+		
+		for(int i=0;i<array.length;i++){
+
+			System.out.print(array[i]+" ");
+
+		}
+
+	}
+
+	public static void bubbleSort (int [] a){
+
+
+		int temp;
+		
+		for(int i=0;i<a.length;i++){
+			int swap=0;
+			for(int j=0;j<a.length-i-1;j++){
+
+				if(a[j]>a[j+1]){
+
+					temp=a[j];
+					a[j]=a[j+1];
+					a[j+1]=temp;
+					swap++;
+					
+
+				}
+
+
+			}
+
+			
+			if(swap==0){
+		
+				break;
+			}
+			
+
+
+		}
+
+		
+		
+
+	}
+
+
+
+
+
+}
